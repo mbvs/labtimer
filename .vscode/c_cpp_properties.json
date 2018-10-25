@@ -1,0 +1,19 @@
+{
+  "configurations": [
+    {
+      "name": "avr",
+      "includePath": ["${workspaceFolder}/**"],
+      "defines": [],
+      "compilerPath": "/usr/local/bin/avr-gcc",
+      "cStandard": "c11",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "clang-x64",
+      "browse": {
+        "path": ["${workspaceFolder}", "/usr/local/lib/avr-gcc"],
+        "limitSymbolsToIncludedHeaders": true,
+        "databaseFilename": ""
+      }
+    }
+  ],
+  "version": 4
+}
