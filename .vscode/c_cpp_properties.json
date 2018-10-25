@@ -3,7 +3,11 @@
     {
       "name": "avr",
       "includePath": ["${workspaceFolder}/**"],
-      "defines": [],
+      "defines": [
+        "__AVR_ATmega328P__",
+        "__AVR__",
+        "__AVR_ENHANCED__"
+      ],
       "compilerPath": "/usr/local/bin/avr-gcc",
       "cStandard": "c11",
       "cppStandard": "c++17",
