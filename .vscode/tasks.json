@@ -4,9 +4,57 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "echo",
+      "label": "flash",
       "type": "shell",
-      "command": "echo Hello"
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "command": "make program",
+      "dependsOrder": "sequence",
+      "dependsOn": ["clean", "build"],
+      "options": {
+        "cwd": "${workspaceFolder}/src"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "showReuseMessage": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "build",
+      "type": "shell",
+      "group": "build",
+      "command": "make all",
+      "dependsOrder": "sequence",
+      "dependsOn": ["clean"],
+      "options": {
+        "cwd": "${workspaceFolder}/src"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "showReuseMessage": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "clean",
+      "type": "shell",
+      "group": "build",
+      "command": "make clean",
+      "options": {
+        "cwd": "${workspaceFolder}/src"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true
+      },
+      "problemMatcher": []
     }
   ]
 }
