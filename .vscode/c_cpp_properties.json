@@ -2,18 +2,21 @@
   "configurations": [
     {
       "name": "avr",
-      "includePath": ["${workspaceFolder}/**"],
+      "includePath": [
+        "${workspaceFolder}/**",
+        "/usr/lib/avr/includes/**"
+      ],
       "defines": [
         "__AVR_ATmega328P__",
         "__AVR__",
         "__AVR_ENHANCED__"
       ],
-      "compilerPath": "/usr/local/bin/avr-gcc",
+      "compilerPath": "/usr/bin/avr-gcc",
       "cStandard": "c11",
       "cppStandard": "c++17",
-      "intelliSenseMode": "clang-x64",
+      "intelliSenseMode": "gcc-x64",
       "browse": {
-        "path": ["${workspaceFolder}", "/usr/local/lib/avr-gcc"],
+        "path": ["${workspaceFolder}", "/usr/lib/avr"],
         "limitSymbolsToIncludedHeaders": true,
         "databaseFilename": ""
       }
