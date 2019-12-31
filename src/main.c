@@ -1,18 +1,30 @@
-#define __AVR_ATmega328P__
 #include <avr/io.h>
 #include <util/delay.h>
 
-int main(void)
-{
-  DDRB = 0xFF;
-  PORTB = 0x03;
+#define LED      PB0
+#define LED_DDR  DDRB
+#define LED_PORT PORTB
 
-  DDRB |= 1 << PINC5;
+#define DELAYTIME 200
 
-  while (1)
-  {
-    _delay_ms(100);
+#define setBit(sfr, bit)     (_SFR_BYTE(sfr) |= (1 << bit))
+#define clearBit(sfr, bit)   (_SFR_BYTE(sfr) &= ~(1 << bit))
+#define toggleBit(sfr, bit)  (_SFR_BYTE(sfr) ^= (1 << bit))
+
+int main(void) {
+
+  // Init
+  setBit(LED_DDR, LED);                      /* set LED pin for output */
+
+  // Mainloop
+  while (1) {
+
+    setBit(LED_PORT, LED);
+    _delay_ms(DELAYTIME);
+
+    clearBit(LED_PORT, LED);
+    _delay_ms(DELAYTIME);
+
   }
-
-  return 0;
+  return 0;                                  /* end mainloop */
 }
