@@ -16,7 +16,6 @@ int main(void)
 
   // Init
   setBit(LED_DDR, LED); /* set LED pin for output */
-
   // Mainloop
   while (1)
   {
