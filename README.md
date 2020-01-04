@@ -3,11 +3,14 @@
 ## Setting up VSCode for embedded development:
 - https://github.com/bfxdev/Arduino/tree/master/VSCode
 
+## Microchip Product Page
+- https://www.microchip.com/wwwproducts/en/ATmega328
+
 ## Makefile Generator:
 - https://0xdec.gitlab.io/avr-makefile-generator/#
 
 ## 7 Segment Displays Max7219 Driver
-- http://gammon.com.au/forum/?id=11516
+- https://adnbr.co.uk/articles/max7219-and-7-segment-displays
 - with timer: http://www.ermicro.com/blog/?p=2292
 
 ## Multiplexing Buttons:
